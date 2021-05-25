@@ -1,0 +1,34 @@
+{
+  "name": "s3-lambda-image-compress",
+  "version": "1.0.0",
+  "description": "Lambda function to compress images from S3 bucket.",
+  "main": "index.js",
+  "scripts": {
+    "pack": "zip -r ./s3-lambda-image-compress.zip ./* -x *.git*,s3-lambda-image-compress.zip,*.vscode*",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhanglifeng-lingoace/s3-lambda-image-compress.git"
+  },
+  "keywords": [
+    "S3",
+    "Lambda",
+    "image",
+    "compress",
+    "resize",
+    "jimp"
+  ],
+  "author": "lifeng.zhang",
+  "license": "Lingoace",
+  "bugs": {
+    "url": "https://github.com/Menupedia/Squirrel/issues"
+  },
+  "homepage": "https://github.com/zhanglifeng-lingoace/s3-lambda-image-compress#readme",
+  "dependencies": {
+    "aws-sdk": "^2.311.0",
+    "gm": "^1.23.1",
+    "jimp": "^0.9.3"
+  },
+  "devDependencies": {}
+}
