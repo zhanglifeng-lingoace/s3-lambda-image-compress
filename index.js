@@ -11,6 +11,8 @@ exports.handler = async(event, context, callback) => {
   console.log("process.env.ALLOWED_RESOLUTIONS:"+process.env.ALLOWED_RESOLUTIONS)
   console.log("ALLOWED_RESOLUTIONS="+JSON.stringify(ALLOWED_RESOLUTIONS));
   console.log("event="+JSON.stringify(event));
+  const objectKey = event.queryStringParameters.key;
+  console.log("objectKey="+JSON.stringify(objectKey));
   try {
 	const match = objectKey.match(/((\d+)x(\d+))\/(.*)/);
 	console.log("match"+JSON.stringify(match));
@@ -109,7 +111,8 @@ function put(destBucket, destKey, data) {
 
 async function compress(inBuffer,width,height) {
 	//Read the image.
-  const image = await jimp.read(inBuffer)
+  const image = await jimp.read(image)
+  console.log(JSON.stringify(originalKey));
   //Resize the image to width  and heigth .
   await image.resize(width,height);
   await image.quality(parseInt(QUALITY));
