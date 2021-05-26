@@ -14,3 +14,28 @@ QUALITY：压缩的比率值
 
 URL:访问压缩后的图片存储桶连接
 
+比如我们现在有一个用户头像在dev.media.zhanglf.com这个存储桶中。具体路径如下：
+
+https://s3-us-west-1.amazonaws.com/dev.media.zhanglf.com/avatar/1926019835/IMG_20171105_140419-387815496.jpg或者cdn链接：
+https://dev.cdn.zhanglf.com/avatar/1926019835/IMG_20171105_140419-387815496.jpg
+
+现在我们的程序展示的图片都是拿到像这样的链接，访问的 就是dev桶的资源。但是如果我们想获取仅仅压缩后的图像（图像尺寸不变），只需要访问：
+
+https://resize.cdn.zhanglf.com/avatar/1926019835/IMG_20171105_140419-387815496.jpg
+
+如果想得到指定宽高尺寸后的压缩图片，只需访问：
+
+https://resize.cdn.zhanglf.com/avatar/1926019835/600x450/IMG_20171105_140419-387815496.jpg
+
+如果想得到只指定宽，按源图片等比例缩放的压缩图片，只需访问：
+
+https://resize.cdn.zhanglf.com/avatar/1926019835/600xh/IMG_20171105_140419-387815496.jpg，也即把高度有450改成h字母。
+
+如果想得到只指定高，按源图片等比例缩放的压缩图片，只需访问：
+
+https://resize.cdn.zhanglf.com/avatar/1926019835/wx450/IMG_20171105_140419-387815496.jpg，也即把宽度600改成w字母。
+
+也即是我们的cdn从dev.cdn.zhanglf.com切到resize.cdn.zhanglf.com，那访问的资源就会变成由dev.media.zhanglf.com这个存储桶切到resize.zhanglf.com桶。
+————————————————
+版权声明：本文为CSDN博主「万米高空」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/zhanglf02/article/details/117259811
