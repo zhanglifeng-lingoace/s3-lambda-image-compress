@@ -36,6 +36,8 @@ https://resize.cdn.zhanglf.com/avatar/1926019835/600xh/IMG_20171105_140419-38781
 https://resize.cdn.zhanglf.com/avatar/1926019835/wx450/IMG_20171105_140419-387815496.jpg，也即把宽度600改成w字母。
 
 也即是我们的cdn从dev.cdn.zhanglf.com切到resize.cdn.zhanglf.com，那访问的资源就会变成由dev.media.zhanglf.com这个存储桶切到resize.zhanglf.com桶。
-————————————————
+
+
+可以参考博文具体讲解
 版权声明：本文为CSDN博主「万米高空」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
 原文链接：https://blog.csdn.net/zhanglf02/article/details/117259811
